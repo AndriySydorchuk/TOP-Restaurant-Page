@@ -1,13 +1,14 @@
 :root {
-    --background-primary: #FFFF90;
-    --background-secondary: #fefe33;
-    --background-tertiary: #fdfdc0;
+    --primary: #F9F5F2;
+    --secondary: #ffd523;
+    --tertiary: #2b8964;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html,
@@ -17,29 +18,96 @@ body {
 
 body {
     min-height: 100vh;
+    background: url(https://static.vecteezy.com/system/resources/previews/013/900/145/non_2x/lemon-pattern-background-design-fruit-natural-free-vector.jpg) no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 80px;
 }
 
 .header {
     display: flex;
     align-items: end;
     justify-content: center;
-    background-color: var(--background-secondary);
+    background-color: var(--secondary);
     padding: 20px 0px 0px;
 }
 
 .btn {
     padding: 16px 8px;
-    background-color: var(--background-secondary);
+    background-color: var(--secondary);
     border-bottom: 0px;
     width: 300px;
     font-size: 24px;
     cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .btn:hover {
-    background-color: var(--background-tertiary);
+    background-color: var(--primary);
 }
 
 .active {
-    background-color: var(--background-tertiary);
+    background-color: var(--primary);
+    box-shadow: 0px 20px 20px var(--primary);
+}
+
+#content {
+    background-color: var(--primary);
+    margin: 20px 0px;
+    width: 800px;
+    justify-self: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title,
+.section {
+    background-color: var(--secondary);
+    border: 8px solid var(--tertiary);
+    margin: 16px;
+    padding: 16px 10px 36px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.title {
+    background-color: var(--secondary);
+    border: 8px solid var(--tertiary);
+    border-radius: 20px 20px 0px 0px;
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 36px;
+    margin: 16px;
+}
+
+.about {
+    background-color: var(--secondary);
+    border: 8px solid var(--tertiary);
+    margin: 16px;
+    padding: 16px 10px;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-list {
+    list-style-type: none;
+    align-self: center;
+}
+
+.section-text {
+    align-self: center;
+}
+
+.location {
+    border-radius: 0px 0px 20px 20px;
 }
