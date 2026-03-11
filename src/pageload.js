@@ -46,7 +46,7 @@ function createHours() {
     ]
 
     const listItems = hours.map(item => {
-        createElement('li', {
+        return createElement('li', {
             classes: ['section-list-item'],
             text: `${item.day}: ${item.hours}`
         })
@@ -56,7 +56,7 @@ function createHours() {
         classes: ['section', 'hours'],
         children: [
             createElement('h3', { classes: ['section-title'], text: 'Hours' }),
-            createElement('ul', { classes: ['section-list'], children: [listItems] })
+            createElement('ul', { classes: ['section-list'], children: listItems })
         ]
     })
 }
