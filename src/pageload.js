@@ -21,10 +21,10 @@ export const initialPageLoad = function () {
 
 function createAbout() {
     return createElement('div', {
-        classes: ['section', 'about'],
+        classes: ['card', 'about'],
         children: [
-            createElement('h3', { classes: ['section-title'], text: 'About Us' }),
-            createElement('p', { classes: ['section-text'], text: 'Welcome to The Copper Kettle, where culinary alchemy meets cozy comfort! Step into our gear-driven sanctuary and enjoy the finest steam-roasted coffees and hearty meals. Whether you are fueling up for a long airship voyage or simply need a warm place to unwind by the furnace, our gears are always turning to serve you the absolute best.' })
+            createElement('h3', { classes: ['card-title'], text: 'About Us' }),
+            createElement('p', { classes: ['card-text'], text: 'Welcome to The Copper Kettle, where culinary alchemy meets cozy comfort! Step into our gear-driven sanctuary and enjoy the finest steam-roasted coffees and hearty meals. Whether you are fueling up for a long airship voyage or simply need a warm place to unwind by the furnace, our gears are always turning to serve you the absolute best.' })
         ]
     })
 }
@@ -39,26 +39,26 @@ function createHours() {
 
     const listItems = hours.map(item => {
         return createElement('li', {
-            classes: ['section-list-item'],
+            classes: ['card-list-item'],
             text: `${item.day}: ${item.hours}`
         })
     });
 
     return createElement('div', {
-        classes: ['section', 'hours'],
+        classes: ['card', 'hours'],
         children: [
-            createElement('h3', { classes: ['section-title'], text: 'Hours' }),
-            createElement('ul', { classes: ['section-list'], children: listItems })
+            createElement('h3', { classes: ['card-title'], text: 'Hours' }),
+            createElement('ul', { classes: ['card-list'], children: listItems })
         ]
     })
 }
 
 function createLocation() {
     return createElement('div', {
-        classes: ['section', 'location'],
+        classes: ['card', 'location'],
         children: [
-            createElement('h3', { classes: ['section-title'], text: 'Location' }),
-            createElement('p', { classes: ['section-text'], text: '42 Clockwork Lane, The Steam District, Cogsville' })
+            createElement('h3', { classes: ['card-title'], text: 'Location' }),
+            createElement('p', { classes: ['card-text'], text: '42 Clockwork Lane, The Steam District, Cogsville' })
         ]
     })
 }

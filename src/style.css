@@ -68,14 +68,14 @@ body {
 }
 
 .title,
-.section {
+.card {
     background-color: var(--secondary);
     border: 8px solid var(--tertiary);
     margin: 16px;
     padding: 16px 10px 36px;
 }
 
-.section {
+.card {
     display: flex;
     flex-direction: column;
     font-size: 20px;
@@ -103,12 +103,12 @@ body {
     flex-direction: column;
 }
 
-.section-list {
+.card-list {
     list-style-type: none;
     align-self: center;
 }
 
-.section-text {
+.card-text {
     align-self: center;
 }
 
