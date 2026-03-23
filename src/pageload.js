@@ -1,4 +1,5 @@
 import { createElement } from './createElementHelper';
+import { createCard } from './createElementHelper';
 
 export const initialPageLoad = function () {
     const content = document.querySelector('#content');
@@ -13,20 +14,18 @@ export const initialPageLoad = function () {
 
     content.append(
         title,
-        createAbout(),
+        createCard(
+            'about',
+            'About Us',
+            'Welcome to The Copper Kettle, where culinary alchemy meets cozy comfort! Step into our gear-driven sanctuary and enjoy the finest steam-roasted coffees and hearty meals. Whether you are fueling up for a long airship voyage or simply need a warm place to unwind by the furnace, our gears are always turning to serve you the absolute best.'
+        ),
         createHours(),
-        createLocation()
+        createCard(
+            'location',
+            'Location',
+            '42 Clockwork Lane, The Steam District, Cogsville'
+        )
     );
-}
-
-function createAbout() {
-    return createElement('div', {
-        classes: ['card', 'about'],
-        children: [
-            createElement('h3', { classes: ['card-title'], text: 'About Us' }),
-            createElement('p', { classes: ['card-text'], text: 'Welcome to The Copper Kettle, where culinary alchemy meets cozy comfort! Step into our gear-driven sanctuary and enjoy the finest steam-roasted coffees and hearty meals. Whether you are fueling up for a long airship voyage or simply need a warm place to unwind by the furnace, our gears are always turning to serve you the absolute best.' })
-        ]
-    })
 }
 
 function createHours() {
@@ -49,16 +48,6 @@ function createHours() {
         children: [
             createElement('h3', { classes: ['card-title'], text: 'Hours' }),
             createElement('ul', { classes: ['card-list'], children: listItems })
-        ]
-    })
-}
-
-function createLocation() {
-    return createElement('div', {
-        classes: ['card', 'location'],
-        children: [
-            createElement('h3', { classes: ['card-title'], text: 'Location' }),
-            createElement('p', { classes: ['card-text'], text: '42 Clockwork Lane, The Steam District, Cogsville' })
         ]
     })
 }
