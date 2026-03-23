@@ -1,4 +1,4 @@
-export const createElement = function (tag, { classes = [], text = '', children = [] } = {}) {
+const createElement = function (tag, { classes = [], text = '', children = [] } = {}) {
     const element = document.createElement(tag);
     if (classes.length) element.classList.add(...classes);
     if (text) element.textContent = text;
@@ -7,3 +7,15 @@ export const createElement = function (tag, { classes = [], text = '', children 
 
     return element;
 }
+
+const createCard = function (cardClass = '', titleText = '', cardText = '') {
+    return createElement('div', {
+        classes: ['card', cardClass],
+        children: [
+            createElement('h3', { classes: ['card-title'], text: titleText }),
+            createElement('p', { classes: ['card-text'], text: cardText })
+        ]
+    })
+}
+
+export { createElement, createCard };
