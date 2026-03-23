@@ -1,3 +1,5 @@
+import { createElement } from './createElementHelper';
+
 export const initialPageLoad = function () {
     const content = document.querySelector('#content');
 
@@ -15,16 +17,6 @@ export const initialPageLoad = function () {
         createHours(),
         createLocation()
     );
-}
-
-function createElement(tag, { classes = [], text = '', children = [] } = {}) {
-    const element = document.createElement(tag);
-    if (classes.length) element.classList.add(...classes);
-    if (text) element.textContent = text;
-
-    children.forEach(child => element.append(child));
-
-    return element;
 }
 
 function createAbout() {
