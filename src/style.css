@@ -79,6 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    border-radius: 20px;
 }
 
 .title {
@@ -122,4 +123,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.section-title {
+    background-color: var(--secondary);
+    border: 8px solid var(--tertiary);
+    border-radius: 20px;
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 28px;
+    margin: 16px;
 }
