@@ -134,3 +134,7 @@ body {
     font-size: 28px;
     margin: 16px;
 }
+
+.contact-card {
+    white-space: pre-line;
+}
