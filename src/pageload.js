@@ -1,5 +1,4 @@
-import { createElement } from './createElementHelper';
-import { createCard } from './createElementHelper';
+import { createElement, createCard } from './createElementHelper';
 
 export const initialPageLoad = function () {
     const content = document.querySelector('#content');
